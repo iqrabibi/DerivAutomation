@@ -1,0 +1,24 @@
+{
+  "name": "derivautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iqrabibi/DerivAutomation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iqrabibi/DerivAutomation/issues"
+  },
+  "homepage": "https://github.com/iqrabibi/DerivAutomation#readme",
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^12.17.4"
+  }
+}
