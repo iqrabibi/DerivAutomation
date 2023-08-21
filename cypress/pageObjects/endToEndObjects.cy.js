@@ -30,6 +30,12 @@ class endToEndClass
             case 'login successful' :
                 cy.url().should('contain', '/dashboard')
                 break
+            case 'Dob is default' :
+                cy.xpath("//*[text()='Date of Birth']/../following-sibling::*/descendant::input").should('not.be.empty')
+
+            case 'Dob is prefilled' :
+                cy.xpath("//*[text()='Date of Birth']/../following-sibling::*/descendant::input").should('have.text', '1995-10-25')
+
         }
     }
 
@@ -52,12 +58,9 @@ class endToEndClass
         cy.xpath("//*[contains(@class,'oxd-date-input-calendar')]").should('be.visible')
         cy.xpath("//*[contains(@class,'oxd-calendar-selector-month')]").click({ multiple: true })
         cy.xpath(`//*[contains(@class,'oxd-calendar-selector-month')]/descendant::*[text()='${month}']`).click({ multiple: true })
-
-        cy.wait(10000)
         cy.xpath("//*[contains(@class,'oxd-calendar-selector-year')]").click({ multiple: true })
         cy.xpath(`//*[contains(@class,'oxd-calendar-selector-year')]/descendant::*[text()='${year}']`).click({ multiple: true })
         cy.xpath(`//*[contains(@class,'oxd-calendar-date') and text()='${date}']`).click()
-
     }
 
 }
