@@ -18,6 +18,7 @@ describe('End to end test cases', () => {
     endToEndObject.clickFunction("My Info")
     endToEndObject.validation("Dob is default")
     endToEndObject.enterDob(this.userData.year , this.userData.month , this.userData.date ) 
+    endToEndObject.clickFunction("submit")
     endToEndObject.validation("Dob is prefilled") 
     
   })

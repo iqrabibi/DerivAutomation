@@ -14,7 +14,7 @@ class endToEndClass
                 cy.xpath(`//*[@class='oxd-dropdown-menu']/li/a[text()='${option}']`).click()
                 break
             case 'submit' :
-                cy.xpath("//*[@type='submit']").click()
+                cy.xpath("//*[@type='submit']").click({multiple:true})
                 break
                 
 
@@ -32,10 +32,10 @@ class endToEndClass
                 break
             case 'Dob is default' :
                 cy.xpath("//*[text()='Date of Birth']/../following-sibling::*/descendant::input").should('not.be.empty')
-
+                break
             case 'Dob is prefilled' :
-                cy.xpath("//*[text()='Date of Birth']/../following-sibling::*/descendant::input").should('have.text', '1995-10-25')
-
+                cy.xpath("//*[text()='Date of Birth']/../following-sibling::*/descendant::input").should('have.value', '1995-10-25')
+                break
         }
     }
 
