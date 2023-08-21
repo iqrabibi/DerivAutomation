@@ -40,7 +40,7 @@ For test case execution , run below commands
 In case of any questions, please contact: 
 * Iqra Bibi : iqrabibi25@yahoo.com
 
-## Sample Execution Image :
+
 
 
 
